@@ -1,0 +1,42 @@
+stages:
+    - deploy
+    
+deploy_staging:
+    image: tetraweb/php
+    stage: deploy
+    before_script:
+        # Installerer ssh agent
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+        
+    script: 
+        - echo "Deploy to production" 
+
+        # Henter inn SSH nøkkel for å få kontakt med server fra GitLab-variabel
+        - ssh-add <(echo "$SSH_PRIVATE_KEY")
+
+        # Fjerner den _old mappen (forrige versjon av den aktive siden)
+        - ssh -p22 root@134.209.21.52 "rm -rf /var/www/_old"
+
+        # Oppretter en _tmp mappe og laster opp GitLab repo til _tmp mappen
+        - ssh -p22 root@134.209.21.52 "mkdir /var/www/_tmp"
+        - scp -p22 -r * root@134.209.21.52:/var/www/_tmp
+
+        # Endrer database-connection fra å bruke lokal til live (i _tmp mappen)
+        - ssh -p22 root@134.209.21.52 "rm /var/www/_tmp/include/pdo_con_inc.php"
+        - ssh -p22 root@134.209.21.52 "mv /var/www/_tmp/include/pdo_con_inc_live.php /var/www/_tmp/include/pdo_con_inc.php"
+
+        # Fjerner filene for kodetesting og readme, slik at dem ikke ligger live
+        - ssh -p22 root@134.209.21.52 "rm /var/www/_tmp/include/class_test.php"
+        - ssh -p22 root@134.209.21.52 "rm /var/www/_tmp/testing.php"
+        - ssh -p22 root@134.209.21.52 "rm /var/www/_tmp/README.md"
+
+        # Lager ny _old mappe og flytter siden som ligger live over til _old.
+        # Flytter innholdet i _tmp over til mappen hvor ting ligger live og sletter _tmp mappen 
+        - ssh -p22 root@134.209.21.52 "mkdir /var/www/_old"
+        - ssh -p22 root@134.209.21.52 "mv /var/www/html/ /var/www/_old && mv /var/www/_tmp /var/www/html/"
+        - ssh -p22 root@134.209.21.52 "rm -rf /var/www/_tmp"
+    only:
+        - master

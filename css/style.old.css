@@ -1,0 +1,375 @@
+/*  -----  -----  -----  -----  Fjern standard styling  -----  -----  -----  -----  */
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body  {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*  -----  -----  -----  -----  Styling  -----  -----  -----  -----  */
+
+:root {
+    --main_gray: #F5F5F5;
+    --main_blue: #008EA8;
+    --main_blue_hover: rgb(9, 133, 155);;
+    --main_box_shadow: 0 3px 6px rgba(0, 0, 0, 0.02);
+}
+
+body {
+    line-height: 1;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* .menu_bar {
+    width: 30px;
+    height: 20px;
+    background-color: red;
+    display: inline-block;
+} */
+
+body main {
+    /* display: inline; */
+    /* width: 100%; */
+}
+
+body main header {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    overflow: auto;
+    position: relative;
+}
+
+body main header figure {
+    padding: 20px;
+}
+
+h4 {
+    font-size: 1rem;
+    margin: 1rem 0.5rem 0.1rem 0rem;
+}
+
+header h1 a, header h1 a:hover, header h1 a:visited, header h1 a:active {
+    color: initial;
+    text-decoration: initial;
+}
+
+body main header nav {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    margin-top: 20px;
+} 
+
+body main header nav input {
+    width: 90%;
+    height: 1.5rem;
+    margin: 0.8rem auto 0.6rem auto;
+    background-color: var(--main_gray);
+    display: block;
+    border: none; 
+    padding: 0.2rem 1rem;
+}
+
+body main header nav button {
+    background-color: transparent;
+    font-weight: lighter;
+    color: #000;
+}
+
+body main header nav form.form__logout {
+    /* background-color: red; */
+    text-align: right;
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+}
+
+body main header nav form button.button__logout {
+    /* background-color: #008EA8; */
+    /* color: #fff; */
+    text-align: right;
+    height: 2rem;
+    font-size: 0.8rem;
+}
+
+body main header nav form button.button__logout:hover {
+    /* background-color: rgb(9, 133, 155); */
+    background-color: transparent;
+    color: #000;
+    text-decoration: underline;
+    margin-right: 0.1rem;
+}
+
+body main header nav form.signup button {
+    position: relative;
+    right: -110px;
+    top: -24px;
+    background-color: transparent;
+    color: #000;
+}
+
+body main header nav form.signup button:hover {
+    right: -111px;
+    text-decoration: underline;
+}
+
+body main header nav form button.button__login {
+    margin-left: -1rem;
+}
+
+body main header nav form button.button__login:hover {
+    margin-left: -0.95rem;
+    text-decoration: underline;
+    color: #000;
+    background-color: transparent;
+}
+
+button {
+    background-color: var(--main_blue);
+    color: #fff;
+    border: none;
+    height: 1.5rem;
+    padding: 0rem 1rem;
+}
+
+button:hover {
+    background-color: var(--main_blue_hover);
+    color: white;
+}
+
+body main header figure h1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 6em;
+}
+
+body main main {
+    width: 100%;
+    min-height: 630px;
+    background-color: var(--main_gray);
+    box-shadow: inset 0 10px 60px rgba(0, 0, 0, 0.04); 
+}
+
+body main main section {
+    width: 650px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+body main main section header {
+    background-color: transparent;
+    margin: auto;
+    height: 11rem;
+    width: 100%;
+    text-align: center;
+}
+
+body main main section header h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2.5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+body main main section nav {
+    width: 100%;
+    margin: auto;
+}
+
+body main main section nav form {
+    width: 100%;
+    min-height: 280px;
+}
+
+input, button, input, select, textarea {
+    border-radius: 4px;
+    border: none;
+    box-shadow: var(--main_box_shadow);
+}
+
+body main main section nav form input,
+body main main section nav form select {
+    background-color: #fff;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+body main main section nav form input, 
+body main main section nav form button,
+body main main section nav form select {
+    height: 2.5rem;
+    
+}
+
+body main main section nav form textarea {
+    min-height: 4rem;
+    padding: 1rem 1rem !important;
+   
+}
+
+body main main section nav form textarea, 
+body main main section nav form input, 
+body main main section nav form button,
+body main main section nav form select {
+    width: 95%;
+    margin: 0.5rem auto;
+    padding: 0.1rem 1rem;
+    font-size: 1rem;
+}
+
+body main main section nav form button,
+body main main section nav form select {
+    width: 100%;
+}
+
+body main main section nav input.input__float__left, 
+body main main section nav input.input__float__right {
+    width: 44% !important;
+}
+
+body main main section nav select.input__float__left, 
+body main main section nav select.input__float__right  {
+    width: 49% !important;
+}
+
+body main main section nav input.input__float__left,
+body main main section nav select.input__float__left {
+    float: left;
+}
+
+body main main section nav input.input__float__right,
+body main main section nav select.input__float__right {
+    float: right;
+}
+
+.input__float__right::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+body main footer {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 0.7rem;
+}
+.Hello__login{
+    text-align: right;
+}
+
+hr {
+    margin: 1.5rem 0 1.5rem 0;
+    visibility: hidden;
+}
+
+.clear::after {
+    content: " ";
+    clear: both;
+    display: table;
+}

@@ -1,0 +1,11 @@
+@media (max-width: 640px) {
+
+	.media_menu {
+		display: none !important;
+	}
+
+	.login {
+		display: grid !important;
+		width: 36px;
+	}
+}

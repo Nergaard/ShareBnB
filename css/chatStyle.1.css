@@ -1,0 +1,61 @@
+/* Chat containers */
+.container {
+  grid-area: main;
+}
+.containers {
+    border: 2px solid #dedede;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+
+  }
+  
+  /* Darker chat container */
+  .green {
+    border-color: lightgreen;
+    background-color:lightgreen;
+    width: 60%;
+    float: right;
+    margin-bottom: 1em;
+  }
+  .blue {
+    border-color: lightblue;
+    background-color:lightblue;
+    width: 60%;
+    float: left;
+    margin-bottom: 1em;
+  }
+  .chat {
+    border: none;
+    width: 100%;
+    height: 20%;
+  }
+  
+  /* Clear floats */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Style the right image */
+ .user{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+ }
+  
+  /* Style time text */
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+  
+  /* Style time text */
+  .time-left {
+    float: left;
+    color: #999;
+  }

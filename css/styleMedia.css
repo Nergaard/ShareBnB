@@ -1,0 +1,165 @@
+@media (max-width: 1500px) {
+
+	.cardcontainer {
+		width: 1136px;
+	}
+}
+
+
+@media (max-width: 1200px) {
+
+	.cardcontainer {
+		width: 850px;
+	}
+}
+
+
+@media (max-width: 943px) {
+
+	.cardcontainer {
+		width: 561px;
+	}
+}
+
+
+@media (max-width: 900px) {
+
+	.main_header {
+		grid-template-columns: auto auto auto 180px 1rem;
+	}
+
+	.filtre__bar {
+		width: 90%;
+	}
+
+	.card {
+		margin: 2rem auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		grid-template-areas: 
+		"card_top"
+		"card_bottom"
+		;
+	}
+
+	.card h1 {
+		font-size: 1.6em;
+	}
+
+	.residence_view__right {
+		grid-area: card_top;
+	}
+
+	.residence_view__left {
+		grid-area: card_bottom;
+	}
+	.residence_view_headline_big {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+
+	.chat_form {
+		width: 100% !important;
+		padding: 0 1em;
+	  }
+
+	  .container {
+		padding: 0 1em;
+		width: 100% !important;
+	  }
+
+	  p.green, p.blue {
+		max-width: 75vw;
+	  }
+}
+
+
+@media (max-width: 640px) {
+
+	.main_header {
+		grid-template-columns: 1rem 36px auto 36px 1rem;
+		background-color: var(--main_white);
+		grid-gap: 1em;
+		
+		grid-template-rows: auto;
+	}
+
+	nav.logo {
+		grid-area: logo;
+		display: grid;
+		place-items: center;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 100;
+		font-size: 4em;
+		margin-left: 0.2em;
+	}
+
+	.login {
+		display: none;
+	}
+
+	.media_menu {
+		grid-area: login;
+		place-items: end;
+		display: grid;
+		margin: 1rem;
+	}
+
+	.main_input {
+		width: 90%;
+	}
+
+	.main__footer__spacer {
+		width: 100%;
+	}
+
+	.cardcontainer {
+		width: 100%;
+		place-items: center;
+		grid-template-columns: 1fr;
+		grid-row-gap: 2.5rem;
+	}
+
+	.main_footer {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"footer";
+	}
+
+}
+
+
+@media (max-width: 500px) {
+
+	.main_header {
+		grid-template-columns: auto auto;
+		grid-template-areas: 
+		"logo login"
+		;
+	}
+
+	.filtre__bar {
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+	}
+
+	.filterstuff {
+		display: grid;
+		margin: 0 -5px;
+		grid-template-columns: 1fr;
+		grid-row-gap: 2rem;
+	}
+
+}
+@media (max-width: 375px) {
+	
+	nav.logo {
+		font-size: 3em;
+		place-items: start;
+	}
+
+
+}

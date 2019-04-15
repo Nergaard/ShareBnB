@@ -1,0 +1,29 @@
+<html>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/chatStyle.css">
+<header><title>ShareBNB Chat</title></header>
+<?php
+$res = new Residence;
+session_start();
+// $user_id = $_SESSION['u_id'];
+$user_name = $_SESSION['u_firstname'];
+?>
+<body>
+<div class="containers">
+<div class="container blue">
+
+<div class="user"><?php $user_name ?></div>
+  <p>Get_messege function()</p>
+  <span class="time-right">Get_time_function()</span>
+</div>
+<div class="container green">
+<div class="user">get_user()</div>
+    <!-- <class="right"> -->
+  <p>Get_messege function()</p>
+  <span class="time-left">Get_time_function()</span>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram height="1000" made_with_version="1.6" name="Default" width="1420">
+<entity id="0" is_weak="false" name="user" x="345" y="78">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="user_ID" type="Counter"/>
+<attribute is_hidden="false" is_key="false" name="user_email" type=""/>
+<attribute is_hidden="false" is_key="false" name="user_firstname" type=""/>
+<attribute is_hidden="false" is_key="false" name="user_lastname" type=""/>
+<attribute is_hidden="false" is_key="false" name="user_pwd" type=""/>
+<attribute is_hidden="false" is_key="false" name="user_phone" type=""/>
+<attribute is_hidden="false" is_key="false" name="user_registration_time" type=""/>
+<attribute is_hidden="false" is_key="false" name="user_home_owner" type="Boolean"/>
+<attribute is_hidden="false" is_key="false" name="user_home_subleaser" type="Boolean"/>
+</attributes>
+</entity>
+<entity id="1" is_weak="false" name="home" x="638" y="77">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="home_ID" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_address" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_zipcode" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_price" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_bedrooms" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_size" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_rating" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_main_img*" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_description" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_type" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_headline" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_owner*" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_subleaser*" type=""/>
+<attribute is_hidden="false" is_key="false" name="home_availeble" type=""/>
+</attributes>
+</entity>
+<entity id="2" is_weak="false" name="img" x="968" y="113">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="img_ID" type=""/>
+<attribute is_hidden="false" is_key="false" name="img_location" type=""/>
+<attribute is_hidden="false" is_key="false" name="img_home_ID*" type=""/>
+</attributes>
+</entity>
+<entity id="6" is_weak="false" name="nearby" x="968" y="192">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="nearby_ID" type=""/>
+<attribute is_hidden="false" is_key="false" name="nearby_description" type=""/>
+<attribute is_hidden="false" is_key="false" name="nearby_address" type=""/>
+<attribute is_hidden="false" is_key="false" name="nearby_distanse" type=""/>
+<attribute is_hidden="false" is_key="false" name="nearby_headline" type=""/>
+<attribute is_hidden="false" is_key="false" name="nearby_home_ID*" type=""/>
+</attributes>
+</entity>
+<entity id="9" is_weak="false" name="availability" x="629" y="376">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="availability_home_ID*" type=""/>
+<attribute is_hidden="false" is_key="true" name="availability_time_from" type=""/>
+<attribute is_hidden="false" is_key="true" name="availability_time_to" type=""/>
+</attributes>
+</entity>
+<entity id="14" is_weak="false" name="kontrakter" x="369" y="285">
+<attributes/>
+</entity>
+<diamond id="11" is_weak="false" name="" x="542" y="117">
+<attributes/>
+</diamond>
+<line cardinality_string="" has_u="false" id="7" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="2" direction="0" object_id="1" relation_point_x="745" relation_point_y="227"/>
+<connection connection_side="0" direction="0" object_id="6" relation_point_x="968" relation_point_y="249"/>
+</line>
+<line cardinality_string="" has_u="false" id="8" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="0" direction="0" object_id="2" relation_point_x="968" relation_point_y="149"/>
+<connection connection_side="2" direction="0" object_id="1" relation_point_x="745" relation_point_y="152"/>
+</line>
+<line cardinality_string="" has_u="false" id="10" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="1" direction="1" object_id="9" relation_point_x="694" relation_point_y="376"/>
+<connection connection_side="3" direction="1" object_id="1" relation_point_x="692" relation_point_y="303"/>
+</line>
+<line cardinality_string="" has_u="false" id="12" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="2" direction="0" object_id="0" relation_point_x="477" relation_point_y="156"/>
+<connection connection_side="0" direction="0" object_id="11" relation_point_x="542" relation_point_y="133"/>
+</line>
+<line cardinality_string="" has_u="false" id="13" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="0" direction="0" object_id="1" relation_point_x="638" relation_point_y="190"/>
+<connection connection_side="2" direction="0" object_id="11" relation_point_x="574" relation_point_y="133"/>
+</line>
+<line cardinality_string="" has_u="false" id="15" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="1" direction="1" object_id="14" relation_point_x="421" relation_point_y="285"/>
+<connection connection_side="3" direction="1" object_id="0" relation_point_x="433" relation_point_y="234"/>
+</line>
+<line cardinality_string="" has_u="false" id="16" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="1" direction="1" object_id="14" relation_point_x="395" relation_point_y="285"/>
+<connection connection_side="3" direction="1" object_id="0" relation_point_x="389" relation_point_y="234"/>
+</line>
+</diagram>

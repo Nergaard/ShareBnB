@@ -1,0 +1,129 @@
+/* Chat containers */
+.container {
+  margin: 4em 0;
+  grid-gap: 4em;
+  display: grid;
+  max-width: 100%;
+  width: 730px;
+}
+
+.chat__container {
+  display: grid;
+  grid-row-gap: 1em;
+}
+
+.message__container {
+  display: grid;
+}
+
+.message__container p {
+  font-size: 0.9em;
+  word-wrap: break-word; 
+}
+
+.message__container span {
+  font-size: 0.6em;
+  margin: 0em 1.5em;
+  color: gray;
+}
+
+.rtl {
+  direction: rtl;
+}
+  
+  /* Darker chat container */
+.green, .blue {
+  border-radius: 25px;
+  padding: 0.7em 1.2em;
+  word-wrap: break-word;
+  max-width: 80%;
+  box-shadow: var(--main_box_shadow);
+}
+.green {
+  background-color:lightgreen;
+  justify-self: start; 
+}
+
+.blue {
+  background-color: rgb(12, 169, 197);
+  color: white;
+  justify-self: end;
+}
+
+.text_message {
+  box-shadow: inset 0 0px 10px rgba(0, 0, 0, 0.082);
+  /* background-color: var(--main_gray); */
+  background-color: rgb(250, 250, 250);
+  border-radius: 0.5rem;
+  font-size: 1em;
+  padding: 0.8em 0.8em;
+}
+
+.chat_form {
+  width: 730px;
+  margin: 0 auto;
+  display: grid;
+  grid-column-gap: 1em;
+  grid-template-columns: 4fr 1fr;
+}
+
+.chat_form button {
+  height: 3.5rem;
+  border-radius: 0.5rem;
+}
+
+
+  /* Style the right image */
+ .user{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+ }
+ .text_message {
+   position: relative;
+ }
+
+ .chat__message__container {
+  width: 100%;
+  position: fixed;
+  padding: 1em 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--main_white);
+  box-shadow: 0 -15px 40px rgba(78, 78, 78, 0.034), inset 0 0px 5px rgba(78, 78, 78, 0.068);
+ }
+
+ /* ****************** Chat list ****************** */
+
+.chat__list {
+  text-align: center;
+}
+
+.chat__list ul li {
+  margin-bottom: 0.5rem;
+  padding-top: 0.65rem;
+  height: 3rem;
+  width: 95vw;
+  max-width: 640px;
+  background-color: var(--main_blue);
+  list-style: none;
+  border-radius: 4px;
+  box-shadow: var(--main_box_shadow);
+  transform: scale(1);
+  transition: transform .2s ease-in-out;
+}
+
+.chat__list ul li:hover {
+  /* background-color: rgb(206, 206, 206); */
+  background-color: var(--main_blue_hover);
+  box-shadow: var(--zoom_box_shadow);
+  transform: scale(1.02);
+  transition: transform .2s ease-in-out;
+}
+
+.chat__list ul a,
+.chat__list ul a:active {
+  color: white;
+  text-decoration: none;
+}

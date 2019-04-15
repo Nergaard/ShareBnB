@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    font-size: 16px;
+}
+
+h2 {
+    word-break: break-word;
+    font-size: 1.375em;
+    line-height: 1.375em;
+    margin: 5px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #eee;
+}
+
+.card {
+    display: flex;
+max-width:29.375rem;
+max-height: 18.75rem;
+    background-color: #fff;
+    border: 2px #aaa solid;
+    border-radius: 5px;
+    overflow: auto;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__p {
+    word-break: break-word;
+    font-size: 1em;
+    line-height: 1.375em;
+    overflow: scroll;
+    margin: 5px;
+}
+
+li{
+    display: inline-flex;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+ul{
+  flex-wrap: wrap;
+  margin:auto 5px 5px 5px;
+  font-weight: bold;
+}
+
+img {
+    width: 100%;
+    max-width: 9.375em;
+    margin: 5px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 20px;
+    margin: auto;
+}
